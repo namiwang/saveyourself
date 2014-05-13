@@ -1,0 +1,18 @@
+
+shelterService.factory('nearestShelters', [
+  '$resource', function($resource) {
+    return function(params) {
+      return $resource('http://api.huaxianweiyi.com:9000', {
+        callback: 'JSON_CALLBACK'
+      }, {
+        jsonp_query: {
+          method: 'JSONP',
+          params: {
+            x: params.x,
+            y: params.y
+          }
+        }
+      });
+    };
+  }
+]);

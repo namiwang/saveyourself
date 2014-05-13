@@ -2,11 +2,14 @@
 <widget id="com.oakstaffstudio.saveyourself" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>SaveYourSelf</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        SaveYourSelf
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="oakstaffstudio@gmail.com" href="http://oakstaffstudio.com">
+        OakStaff Studio
     </author>
+    <preference name="permissions" value="none" />
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="http://api.huaxianweiyi.com" />
 </widget>
+
+<!-- TODO https://github.com/phonegap/phonegap-start/blob/master/www/config.xml -->
