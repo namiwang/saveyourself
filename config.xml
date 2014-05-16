@@ -10,7 +10,8 @@
     <preference name="permissions" value="none" />
     <content src="index.html" />
     <access origin="http://api.huaxianweiyi.com" />
-    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.6" />
+
+    <gap:plugin name="org.apache.cordova.geolocation" />
 </widget>
 
 <!-- TODO https://github.com/phonegap/phonegap-start/blob/master/www/config.xml -->
