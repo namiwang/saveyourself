@@ -15,19 +15,21 @@
       {{nearestShelters}}
     </div>
 
+    <script type="text/javascript" src="scripts/cordova.js"></script>
+
     <script type="text/javascript" src="scripts/angular.min.js"></script>
     <script type="text/javascript" src="scripts/angular-resource.min.js"></script>
 
     <script type="text/javascript" src="scripts/ionic.bundle.min.js"></script>
-
-    <script type="text/javascript" src="scripts/cordova.js"></script>
 
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/controllers.js"></script>
     <script type="text/javascript" src="scripts/services.js"></script>
 
     <script type="text/javascript">
-      // TODO use cordova deviceready function to trigger angular bootstrap
+      document.addEventListener('deviceready', function onDeviceReady() {
+        angular.bootstrap(document, ['saveYourSelf']);
+      }, false);
     </script>
   </body>
 </html>
