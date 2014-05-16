@@ -12,11 +12,12 @@
   <body>
 
     <div ng-app='saveYourSelf' ng-controller='mainCtrl'>
-      <div>{{currentLocation}}</div>
-      <div>{{nearestShelters.address}}</div>
+      {{currentLocation}}
+      {{nearestShelters}}
     </div>
 
-    <script type="text/javascript" src="scripts/cordova.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="geolocation.js"></script>
 
     <script type="text/javascript" src="scripts/angular.min.js"></script>
     <script type="text/javascript" src="scripts/angular-resource.min.js"></script>
