@@ -1,8 +1,8 @@
-shelterService.factory 'nearestShelters', [ '$resource',
+dataService.factory 'nearestShelters', [ '$resource',
   ($resource) ->
     (params) ->
       $resource 'http://api.huaxianweiyi.com:9000', {callback: 'JSON_CALLBACK'}, {
-        jsonp_query: {
+        query_jsonp: {
           method: 'JSONP',
           params: {
             x: params.x,

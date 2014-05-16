@@ -1,3 +1,3 @@
-@app = angular.module('saveYourSelf', ['ionic', 'shelterService'])
+@app = angular.module('saveYourSelf', ['ionic', 'dataService'])
 
-@shelterService = angular.module('shelterService', ['ngResource'])
+@dataService = angular.module('dataService', ['ngResource'])

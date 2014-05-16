@@ -12,7 +12,8 @@
   <body>
 
     <div ng-app='saveYourSelf' ng-controller='mainCtrl'>
-      {{nearestShelters}}
+      <div>{{currentLocation}}</div>
+      <div>{{nearestShelters.address}}</div>
     </div>
 
     <script type="text/javascript" src="scripts/cordova.js"></script>
