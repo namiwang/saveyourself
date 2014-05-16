@@ -1,18 +1,3 @@
-<?xml version='1.0' encoding='utf-8'?>
-
-
-    <name>SaveYourSelf</name>
-    <description>
-        SaveYourSelf
-    </description>
-
-    <preference name="permissions" value="none" />
-    <content src="index.html" />
-
-    <preference name="phonegap-version"           value="3.4.0" />          <!-- all: current version of PhoneGap -->
-    <gap:plugin name="org.apache.cordova.geolocation" />
-</widget>
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
