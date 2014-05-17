@@ -27,14 +27,19 @@
         [on-scroll=""]
         [on-scroll-complete=""]>
 
-        
-        <div class="item">
-          {{nearestShelters.address}}
+        <div class="card">
+          <div class="item item-text-wrap">
+            <i class="icon ion-ios7-location"></i>
+            {{nearestShelters.address}}
+          </div>
         </div>
 
         <div class="card" ng-repeat="shelter in nearestShelters.nearest_shelters">
-          <div class="item item-text-wrap">
-            <a class="button button-block button-assertive" href="tel:{{shelter.phone}}">{{shelter.phone}}</a>
+          <div class="item item-text-wrap" ng-repeat="phone in shelter.phone">
+            <a class="button button-block button-assertive" href="tel:{{phone}}">
+              <i class="icon ion-ios7-telephone"></i>
+              {{phone}}
+            </a>
           </div>
           <div class="item item-divider">
             {{shelter.name}} {{shelter.address}}
