@@ -9,8 +9,8 @@ dataService.factory('nearestShelters', [
         query_jsonp: {
           method: 'JSONP',
           params: {
-            x: params.x,
-            y: params.y
+            longitude: params.longitude,
+            latitude: params.latitude
           }
         }
       });

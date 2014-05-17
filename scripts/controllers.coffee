@@ -1,18 +1,17 @@
 app.controller 'mainCtrl', [
   '$scope', 'nearestShelters',
   ($scope, nearestShelters) ->
-    window.SCOPE = $scope
+    # window.SCOPE = $scope
 
     navigator.geolocation.getCurrentPosition(
       (position) ->
-        $scope.currentLocation = position
+        $scope.nearestShelters = nearestShelters({longitude: position.coords.longitude, latitude: position.coords.latitude}).query_jsonp()
       , ->
         return 
-      , {enableHighAccuracy: true }
+      # , {enableHighAccuracy: true}
     )
 
     # $scope.currentLocation = currentLocation.query()
-    $scope.nearestShelters = nearestShelters({x: 31.2268098, y: 121.5359274}).query_jsonp()
     # $scope.nearestShelters = nearestShelters.jsonp_query().$promise
     # TODO figure out what's $promise and use it
 ]

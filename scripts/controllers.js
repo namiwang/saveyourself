@@ -2,15 +2,11 @@
 
 app.controller('mainCtrl', [
   '$scope', 'nearestShelters', function($scope, nearestShelters) {
-    window.SCOPE = $scope;
-    navigator.geolocation.getCurrentPosition(function(position) {
-      return $scope.currentLocation = position;
-    }, function() {}, {
-      enableHighAccuracy: true
-    });
-    return $scope.nearestShelters = nearestShelters({
-      x: 31.2268098,
-      y: 121.5359274
-    }).query_jsonp();
+    return navigator.geolocation.getCurrentPosition(function(position) {
+      return $scope.nearestShelters = nearestShelters({
+        longitude: position.coords.longitude,
+        latitude: position.coords.latitude
+      }).query_jsonp();
+    }, function() {});
   }
 ]);

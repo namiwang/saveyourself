@@ -11,9 +11,13 @@
   </head>
   <body>
 
-    <div ng-app='saveYourSelf' ng-controller='mainCtrl'>
-      {{currentLocation}}
-      {{nearestShelters}}
+    <div ng-app="saveYourSelf" ng-controller="mainCtrl">
+      {{nearestShelters.address}}
+      <ul>
+        <li ng-repeat="shelter in nearestShelters.nearest_shelters">
+          {{shelter}}
+        </li>        
+      </ul>
     </div>
 
     <script src="phonegap.js"></script>
