@@ -1,8 +1,6 @@
 app.controller 'mainCtrl', [
   '$scope', 'nearestShelters',
   ($scope, nearestShelters) ->
-    window.SCOPE = $scope
-
     navigator.geolocation.getCurrentPosition(
       (position) ->
         $scope.nearestShelters = nearestShelters({longitude: position.coords.longitude, latitude: position.coords.latitude}).query_jsonp()

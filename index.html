@@ -12,12 +12,29 @@
   <body>
 
     <div ng-app="saveYourSelf" ng-controller="mainCtrl">
-      {{nearestShelters.address}}
-      <ul>
-        <li ng-repeat="shelter in nearestShelters.nearest_shelters">
-          {{shelter}}
-        </li>        
-      </ul>
+
+      <div class="bar bar-header bar-stable">
+        <h1 class="title">bar-stable</h1>
+      </div>
+
+      <ion-content
+        [delegate-handle=""]
+        [padding=""]
+        [scroll=""]
+        [overflow-scroll=""]
+        [has-bouncing=""]
+        [on-scroll=""]
+        [on-scroll-complete=""]>
+
+        {{nearestShelters.address}}
+
+        <ul>
+          <li ng-repeat="shelter in nearestShelters.nearest_shelters">
+            {{shelter}}
+          </li>        
+        </ul>
+
+      </ion-content>
     </div>
 
     <script src="phonegap.js"></script>
