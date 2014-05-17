@@ -1,7 +1,7 @@
 app.controller 'mainCtrl', [
   '$scope', 'nearestShelters',
   ($scope, nearestShelters) ->
-    # window.SCOPE = $scope
+    window.SCOPE = $scope
 
     navigator.geolocation.getCurrentPosition(
       (position) ->
